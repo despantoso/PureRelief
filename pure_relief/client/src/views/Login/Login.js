@@ -10,7 +10,7 @@ class Login extends React.Component {
             <Container style={{ background: "white-smoke", borderRadius: "5px", color: "black", boxShadow: "2px", border:"black"}}>
             <br/>
             <br/>
-            <h3 style={{ textAlign: "center" }}></h3>
+            <h3 style={{ textAlign: "center" }}>Welcome</h3>
             <Form className="login-box">
                 <Form.Group controlId="formBasicUsername">
                     <Form.Label>Email address</Form.Label>

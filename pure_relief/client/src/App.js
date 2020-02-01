@@ -6,6 +6,7 @@ import Header from "./components/Header/Header"
 import Shelter from "./views/Shelter/Shelter"
 import Login from "./views/Login/Login"
 import { Container } from 'react-bootstrap';
+import ReliefCompany from "./views/ReliefCompany/ReliefCompany"
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
     <Container>
       <Switch>
         <Route exact path="/Home" component={Home} />
+        <Route exact path="/ReliefCompany" component={ReliefCompany} />
         <Route exact path="/Shelter" component={Shelter}/>
         <Route exact path="/Login" component={Login}/>
         <Route component={NotFound}/>
