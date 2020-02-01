@@ -46,7 +46,9 @@ class Login extends React.Component {
         return(
             <div>
                 <br/>
-                <br/>
+                <h1 style={{fontWeight: "bold", fontSize: "6vw", textAlign: "center"}}>
+                    PureRelief
+                </h1>
                 <br/>
                 <br/>
                 <br/>
@@ -85,8 +87,9 @@ class Login extends React.Component {
                         <br/>
                         <Link to="/signup" style={{alignContent: "center"}}>
                             <Button 
-                            variant="primary" 
-                            style={{margin: "4px"}}> Create Account</Button>
+                            variant="outline-primary"
+                            style={{margin: "4px"}}
+                            block> Create Account</Button>
                         </Link>
                 </Form.Group>
                 </Form>
