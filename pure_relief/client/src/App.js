@@ -8,6 +8,7 @@ import Login from "./views/Login/Login"
 import { Container } from 'react-bootstrap';
 import Request from "./views/ReliefCompany/ReliefCompanyRequest"
 import Donations from "./views/ReliefCompany/ReliefCompanyDonations"
+import SignUp from "./views/SignUp/SignUp"
 
 
 
@@ -18,8 +19,10 @@ const App = () => {
         <Route exact path="/Home" component={Home} />
         <Route exact path="/ReliefCompany/Requests" component={Request} />
         <Route exact path="/ReliefCompany/Donations" component={Donations} />
+        <Route exact path="/" component={Login} />
         <Route exact path="/Shelter" component={Shelter}/>
         <Route exact path="/Login" component={Login}/>
+        <Route exact path="/SignUp" component={SignUp}/>
         <Route component={NotFound}/>
       </Switch>
     </Container>
