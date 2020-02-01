@@ -41,7 +41,7 @@ class Shelter extends React.Component {
         </p>
 
       <Container>
-        <h6 style = {{fontWeight: "bold", fontSize: "2vw", textAlign: "left"  }}>
+        <h6 style = {{fontWeight: "bold", fontSize: "2vw", textAlign: "left"}}>
           NonPerishables and Water
         </h6>
          <p></p>

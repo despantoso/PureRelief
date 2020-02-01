@@ -5,13 +5,13 @@ import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { ButtonToolbar } from 'react-bootstrap';
-import Badge from 'react-bootstrap/Badge'
 import Alert from 'react-bootstrap/Alert'
+import Image from 'react-bootstrap/Image'
+import {Link} from 'react-router-dom'
 
-class ReliefCompany extends React.Component {
+
+
+class ReliefCompanyRequest extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -19,21 +19,25 @@ class ReliefCompany extends React.Component {
   render() {
     return(
       <div>
-        <h1 style = {{fontWeight: "bold", fontSize: "6vw", textAlign: "center"  }}>
+        <h1 style = {{fontWeight: "bold", fontSize: "6vw", textAlign: "center" }}>
           PureRelief
         </h1>
 
         <Navbar bg="primary" variant="dark">
             <ButtonGroup size="lg">
-                <Button>Donations</Button>
-                <Button>Requests</Button>
-            </ButtonGroup>
+                <Link to="/ReliefCompany/Donations">
+                  <Button>Donations</Button>
+                </Link>
+                <Link to="/ReliefCompany/Requests">
+                  <Button>Requests</Button>
+                </Link>            
+                </ButtonGroup>
             <Nav className="mr-auto">
-        </Nav>
+            </Nav>
 
-        <Nav >
-          <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
-        </Nav>
+            <Nav >
+                <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
+            </Nav>
         
         </Navbar>
 
@@ -49,8 +53,8 @@ class ReliefCompany extends React.Component {
         </Alert>
 
         <p></p>
-         <Card style={{ width: '70rem', height: '15rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+         <Card style={{ width: '67rem', height: '15rem' }}>
+          
           <Card.Body>
             <Card.Title>Shelter A</Card.Title>
             <Card.Text>
@@ -69,8 +73,7 @@ class ReliefCompany extends React.Component {
 
         <p></p>
 
-        <Card style={{ width: '70rem', height: '15rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={{ width: '67rem', height: '15rem'}}>
           <Card.Body>
             <Card.Title>Shelter B</Card.Title>
             <Card.Text>
@@ -82,15 +85,13 @@ class ReliefCompany extends React.Component {
 
         <p>
         </p>
-
         <Alert variant= "success" style = {{textAlign: "center", fontWeight: "bold", fontSize: "2vw"}}>
             Low-Level Requests
         </Alert>
 
         <p></p>
 
-        <Card style={{ width: '70rem', height: '15rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
+        <Card style={{ width: '67rem', height: '15rem' }}>
           <Card.Body>
             <Card.Title>Shelter C</Card.Title>
             <Card.Text>
@@ -105,4 +106,4 @@ class ReliefCompany extends React.Component {
 
   }
 }
-export default ReliefCompany
+export default ReliefCompanyRequest
