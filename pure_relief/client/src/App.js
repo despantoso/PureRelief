@@ -7,6 +7,8 @@ import Shelter from "./views/Shelter/Shelter"
 import Login from "./views/Login/Login"
 import { Container } from 'react-bootstrap';
 import ReliefCompany from "./views/ReliefCompany/ReliefCompany"
+import SignUp from "./views/SignUp/SignUp"
+
 
 
 const App = () => {
@@ -14,9 +16,11 @@ const App = () => {
     <Container>
       <Switch>
         <Route exact path="/Home" component={Home} />
+        <Route exact path="/" component={Login} />
         <Route exact path="/ReliefCompany" component={ReliefCompany} />
         <Route exact path="/Shelter" component={Shelter}/>
         <Route exact path="/Login" component={Login}/>
+        <Route exact path="/SignUp" component={SignUp}/>
         <Route component={NotFound}/>
       </Switch>
     </Container>
