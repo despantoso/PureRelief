@@ -54,7 +54,7 @@ class ReliefCompany extends React.Component {
           <Card.Body>
             <Card.Title>Shelter A</Card.Title>
             <Card.Text>
-            Heyyyyy 
+                Heyyyyy 
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
            </Card.Body>
@@ -74,7 +74,7 @@ class ReliefCompany extends React.Component {
           <Card.Body>
             <Card.Title>Shelter B</Card.Title>
             <Card.Text>
-            Heyyyyy 
+                Heyyyyy 
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
            </Card.Body>
@@ -94,7 +94,7 @@ class ReliefCompany extends React.Component {
           <Card.Body>
             <Card.Title>Shelter C</Card.Title>
             <Card.Text>
-            Heyyyyy 
+                Heyyyyy 
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
            </Card.Body>

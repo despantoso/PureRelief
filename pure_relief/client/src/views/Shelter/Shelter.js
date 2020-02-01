@@ -1,12 +1,15 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import image from '../../assets/logo192.png'
 import { ButtonToolbar } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container'
+import Table from 'react-bootstrap/Table'
 
 class Shelter extends React.Component {
   constructor(props) {
@@ -16,39 +19,131 @@ class Shelter extends React.Component {
   render() {
     return(
       <div>
+        <h1 style = {{fontWeight: "bold", fontSize: "6vw", textAlign: "center"  }}>
+          PureRelief
+        </h1>
 
         <Navbar bg="primary" variant="dark">
-        <Navbar.Brand href="#home" style = {{fontWeight: "bold", fontSize: "5vw"  }}>PureRelief</Navbar.Brand>
-        <Nav className="mr-auto">
+            <ButtonGroup size="lg">
+                <Button>Inventory</Button>
+                <Button>Requests</Button>
+            </ButtonGroup>
+            <Nav className="mr-auto">
         </Nav>
+
         <Nav >
-          <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
+          <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Shelter Name </Nav.Link>
         </Nav>
-          <Row>
-            <Col xs={1} md={1}>
-              <img src={image} style={{width: "4vw", height: "4vw"}} />
-            </Col>
-          </Row>
-         </Navbar>
+        
+        </Navbar>
 
-         <ButtonToolbar style = {{float: 'right'}}>
-            <Button variant="secondary"  style = {{borderStyle: "solid", borderLeftStyle: "inset", borderRightStyle: "groove", borderBottomStyle: "groove", borderTopStyle: "inset"}}>Request</Button>
-            <Button variant="dark"  style = {{borderStyle: "solid", borderLeftStyle: "inset", borderRightStyle: "groove", borderBottomStyle: "groove", borderTopStyle: "inset"}}>Donations</Button>
-         </ButtonToolbar>
+        <p>
+        </p>
 
-         <p>
-         </p>
+      <Container>
+        <h6 style = {{fontWeight: "bold", fontSize: "2vw", textAlign: "left"  }}>
+          NonPerishables and Water
+        </h6>
+         <p></p>
+         <Table the size="lg">
+          <thead>
+            <td style= {{fontWeight: "bold"}}>Items</td>
+            <td style= {{fontWeight: "bold", textAlign: "right"}}>Current Amount</td>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>Water</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td>Canned Food</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td>More Canned Food</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+          </tbody>
+        </Table>
+        
+        <ButtonToolbar>
+          <Button variant="primary" size="md" active>
+            Add Item
+          </Button>
+        </ButtonToolbar>
 
-         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Shelter A</Card.Title>
-            <Card.Text>
-            Heyyyyy 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-           </Card.Body>
-        </Card>
+        <p></p>
+
+        <h6 style = {{fontWeight: "bold", fontSize: "2vw", textAlign: "left"  }}>
+          First Aid Supplies
+        </h6>
+         <p></p>
+         <Table the size="lg">
+          <thead>
+            <td style={{fontWeight: "bold"}}>Items</td>
+            <td style= {{fontWeight: "bold", textAlign: "right"}}>Current Amount</td>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>First Aid Kits</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td>Sterile Gloves</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td >Pain Relievers</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+          </tbody>
+        </Table>
+
+        <ButtonToolbar>
+          <Button variant="primary" size="md" active>
+            Add Item
+          </Button>
+        </ButtonToolbar>
+
+        <p></p>
+
+        <h6 style = {{fontWeight: "bold", fontSize: "2vw", textAlign: "left"  }}>
+          Sanitary Products
+        </h6>
+
+         <p></p>
+         <Table the size="lg">
+          <thead>
+            <td style= {{fontWeight: "bold"}}>Items</td>
+            <td style= {{fontWeight: "bold", textAlign: "right"}}>Current Amount</td>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td>Soap</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td>Feminine Products and diapers</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+            <tr>
+              <td>Wet Wipes</td>
+              <td style= {{textAlign: "right"}}>1</td>
+            </tr>
+          </tbody>
+        </Table>
+
+        <ButtonToolbar>
+          <Button variant="primary" size="md" active>
+            Add Item
+          </Button>
+        </ButtonToolbar>
+
+        <p></p>
+      </Container>
       </div>
     )
 
