@@ -1,4 +1,5 @@
 import React from 'react'
+import {Container} from 'react-bootstrap'
 
 class SignUp extends React.Component{
     constructor(props){
@@ -6,9 +7,9 @@ class SignUp extends React.Component{
     }
     render(){
         return(
-            <div>
+            <Container>
             <p>HEYY</p>
-            </div>
+            </Container>
         )}
 }
 

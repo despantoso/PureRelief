@@ -3,30 +3,12 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 import {Form, Button, Card, Container, ButtonGroup, ToggleButton, Row, Col, ButtonToolbar} from 'react-bootstrap'
 
-class Login extends React.Component {
+class RCLogin extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            isReliefOrg: false,
-            isReliefOrgString: "Shelter Username"
+            isReliefOrg: true,
         }
-    }
-
-    userUpdateRO(){
-        console.log("Im here")
-        this.setState({
-            isReliefOrgString: "Relief Organization Username",
-            isReliefOrg:true
-        })
-        console.log(this.state.isReliefOrg)
-    }
-    userUpdateS(){
-        console.log("Im here")
-        this.setState({
-            isReliefOrgString: "Shelter Username",
-            isReliefOrg:false
-        })
-        console.log(this.state.isReliefOrg)
     }
 
     userInformation()
@@ -41,8 +23,6 @@ class Login extends React.Component {
     }
 
     render(){
-        var isReliefOrgString = this.state.isReliefOrgString;
-
         return(
             <div>
                 <br/>
@@ -53,11 +33,15 @@ class Login extends React.Component {
                 <br/>
                 <br/>
                 <ButtonToolbar className="justify-content-center">
-                    <Button onClick={this.userUpdateS.bind(this)} variant="success" size="lg" style={{margin: "4px"}}>Shelters</Button>
-                    <br/>
-                    <Button onClick={this.userUpdateRO.bind(this)} variant="info" size="lg" style={{margin: "4px"}}>
-                        Relief Organization
-                    </Button>
+                    <Link to="/Login/ShelterLogin" style={{alignContent: "center"}}>
+                        <Button variant="success" size="lg" style={{margin: "4px"}}>Shelters</Button>
+                        </Link>
+                        <br/>
+                        <Link to="/Login/RCLogin" style={{alignContent: "center"}}>
+                        <Button variant="info" size="lg" style={{margin: "4px"}}>
+                            Relief Organization
+                        </Button>
+                        </Link>
                 </ButtonToolbar>
                 <br/>
                 <div className="login-box">
@@ -65,7 +49,7 @@ class Login extends React.Component {
                 <Form>
                 <h4>Please Sign In or Register</h4>
                 <Form.Group controlId="userInformation">
-                    <Form.Label>{isReliefOrgString}</Form.Label>
+                    <Form.Label>Relief Organization Username</Form.Label>
                     <Form.Control 
                     type="text"
                     ref="userName"
@@ -78,12 +62,14 @@ class Login extends React.Component {
                     placeholder="Password" 
                     required/>
                     <br/>
+                    <Link to="/signup" style={{alignContent: "center"}}>
                         <Button 
                         onClick={() => {this.userInformation()}}
                         variant="primary" 
                         style={{margin: "4px"}}
                         block
                         >Sign In</Button>
+                        </Link>
                         <br/>
                         <Link to="/signup" style={{alignContent: "center"}}>
                             <Button 
@@ -99,4 +85,4 @@ class Login extends React.Component {
         )
     }
 }
-export default Login
+export default RCLogin
