@@ -10,8 +10,9 @@ import image from '../../assets/logo192.png'
 import { ButtonToolbar } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container'
 import Table from 'react-bootstrap/Table'
+import {Link} from 'react-router-dom'
 
-class Shelter extends React.Component {
+class ShelterInventory extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -25,8 +26,12 @@ class Shelter extends React.Component {
 
         <Navbar bg="primary" variant="dark">
             <ButtonGroup size="lg">
-                <Button>Inventory</Button>
-                <Button>Requests</Button>
+                <Link to="/Shelter/Inventory">
+                  <Button>Inventory</Button>
+                </Link>
+                <Link to="/Shelter/Requests">
+                  <Button>Requests</Button>
+                </Link>        
             </ButtonGroup>
             <Nav className="mr-auto">
         </Nav>
@@ -149,4 +154,4 @@ class Shelter extends React.Component {
 
   }
 }
-export default Shelter
+export default ShelterInventory
