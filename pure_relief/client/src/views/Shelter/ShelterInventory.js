@@ -104,7 +104,7 @@ class ShelterInventory extends React.Component {
           <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Shelter Name </Nav.Link>
         </Nav>
         
-        <Link to="/login">
+        <Link to="/Login/ShelterLogin">
           <Button variant="danger">Sign Out</Button>
         </Link> 
         </Navbar>

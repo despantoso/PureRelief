@@ -62,7 +62,7 @@ class RCLogin extends React.Component {
                     placeholder="Password" 
                     required/>
                     <br/>
-                    <Link to="/signup" style={{alignContent: "center"}}>
+                    <Link to="/ReliefCompany/Requests" style={{alignContent: "center"}}>
                         <Button 
                         onClick={() => {this.userInformation()}}
                         variant="primary" 
@@ -71,7 +71,7 @@ class RCLogin extends React.Component {
                         >Sign In</Button>
                         </Link>
                         <br/>
-                        <Link to="/signup" style={{alignContent: "center"}}>
+                        <Link to="/RCSignUp" style={{alignContent: "center"}}>
                             <Button 
                             variant="outline-primary"
                             style={{margin: "4px"}}

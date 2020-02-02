@@ -47,7 +47,7 @@ class RCSignUp extends React.Component{
                     required
                     placeholder="Enter location"/>
                     <br/>
-                    <Link to="/signup" style={{alignContent: "center"}}>
+                    <Link to="/ReliefCompany/Requests" style={{alignContent: "center"}}>
                             <Button 
                             onClick={() => {this.userInformation()}}
                             variant="outline-primary"

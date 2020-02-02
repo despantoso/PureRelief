@@ -79,7 +79,7 @@ class ShelterLogin extends React.Component {
                         >Sign In</Button>
                         </Link>
                         <br/>
-                        <Link to="/signup" style={{alignContent: "center"}}>
+                        <Link to="/ShelterSignUp" style={{alignContent: "center"}}>
                             <Button 
                             variant="outline-primary"
                             style={{margin: "4px"}}
