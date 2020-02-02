@@ -72,7 +72,7 @@ class ReliefCompanyRequest extends React.Component {
             <Nav >
                 <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
                 
-                <Link to="/login">
+                <Link to="/Login/RCLogin">
                   <Button variant="danger">Sign Out</Button>
                 </Link> 
             </Nav>

@@ -38,7 +38,7 @@ class ReliefCompanyDonations extends React.Component {
                 <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
             </Nav>
 
-            <Link to="/login">
+            <Link to="/Login/RCLogin">
                   <Button variant="danger">Sign Out</Button>
             </Link> 
         
