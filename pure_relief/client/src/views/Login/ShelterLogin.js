@@ -70,7 +70,7 @@ class ShelterLogin extends React.Component {
                     placeholder="Password" 
                     required/>
                     <br/>
-                    <Link to="/Shelter" style={{alignContent: "center"}}>
+                    <Link to="/Shelter/Inventory" style={{alignContent: "center"}}>
                         <Button 
                         onClick={() => {this.userInformation()}}
                         variant="primary" 
