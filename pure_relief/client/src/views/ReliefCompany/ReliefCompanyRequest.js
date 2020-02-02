@@ -66,11 +66,15 @@ class ReliefCompanyRequest extends React.Component {
                 <Link to="/ReliefCompany/Requests">
                   <Button>Requests</Button>
                 </Link>            
-                </ButtonGroup>
+              </ButtonGroup>
             <Nav className="mr-auto">
             </Nav>
             <Nav >
                 <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
+                
+                <Link to="/login">
+                  <Button variant="danger">Sign Out</Button>
+                </Link> 
             </Nav>
         
         </Navbar>
