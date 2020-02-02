@@ -44,7 +44,7 @@ class ShelterRequest extends React.Component {
         <Link to="/login">
             <Button variant="danger">Sign Out</Button>
         </Link> 
-        
+
         </Navbar>
 
         <p>
@@ -102,8 +102,9 @@ class ShelterRequest extends React.Component {
                 <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="First-Aid" />
             </Form.Group>
-
-            <Button variant="primary">Submit</Button>
+            <Link to="/Shelter/Inventory">
+                <Button variant="primary">Submit</Button>
+            </Link> 
         </Form>
       </Container>
       </div>

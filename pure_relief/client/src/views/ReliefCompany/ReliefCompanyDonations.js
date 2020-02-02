@@ -66,7 +66,21 @@ class ReliefCompanyDonations extends React.Component {
                 <Form.Check inline label="Low" type={type} id={`inline-${type}-3`} />
                 </div>
             ))}
+            <br/>
+            <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
+            Please insert name of shelter supplies are being shipped to.
+            </h6>
 
+            <Form.Group className="box">
+                <Form.Row>
+                    <Form.Label column lg={2}>
+                    Shelter:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control type="text" placeholder="Insert Name" />
+                    </Col>
+                </Form.Row>
+            </Form.Group>
             <br/>
             <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
             Check off supplies you are sending:
@@ -109,8 +123,9 @@ class ReliefCompanyDonations extends React.Component {
                     </Col>
                 </Form.Row>
             </Form.Group>
-
-            <Button variant="primary">Submit</Button>
+            <Link to="/ReliefCompany/Requests">
+                    <Button variant="primary">Submit</Button>
+              </Link>
         </Form>
 
       <Container>
