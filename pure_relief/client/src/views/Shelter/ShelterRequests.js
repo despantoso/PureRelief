@@ -1,16 +1,20 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Alert from 'react-bootstrap/Alert'
-import {Link} from 'react-router-dom'
-import Image from 'react-bootstrap/Image'
-import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-class ReliefCompanyDonations extends React.Component {
+import image from '../../assets/logo192.png'
+import { ButtonToolbar } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container'
+import Table from 'react-bootstrap/Table'
+import {Link} from 'react-router-dom'
+import Form from 'react-bootstrap/Form'
+import './ShelterRequests.css'
+
+class ShelterRequest extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,37 +22,39 @@ class ReliefCompanyDonations extends React.Component {
   render() {
     return(
       <div>
-        <h1 style = {{fontWeight: "bold", fontSize: "6vw", textAlign: "center" }}>
+        <h1 style = {{fontWeight: "bold", fontSize: "6vw", textAlign: "center"  }}>
           PureRelief
         </h1>
 
         <Navbar bg="primary" variant="dark">
             <ButtonGroup size="lg">
-              <Link to="/ReliefCompany/Donations">
-                    <Button>Donations</Button>
-                  </Link>
-                  <Link to="/ReliefCompany/Requests">
-                    <Button>Requests</Button>
-              </Link>        
+                <Link to="/Shelter/Inventory">
+                  <Button>Inventory</Button>
+                </Link>
+                <Link to="/Shelter/Requests">
+                  <Button>Requests</Button>
+                </Link>        
             </ButtonGroup>
             <Nav className="mr-auto">
-            </Nav>
+        </Nav>
 
-            <Nav >
-                <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Company Name </Nav.Link>
-            </Nav>
-
-            <Link to="/login">
-                  <Button variant="danger">Sign Out</Button>
-            </Link> 
+        <Nav >
+          <Nav.Link href="#home" style = {{fontWeight: "medium", fontSize: "1.5vw", color:"white"}}>Shelter Name </Nav.Link>
+        </Nav>
+        <Link to="/login">
+            <Button variant="danger">Sign Out</Button>
+        </Link> 
         
         </Navbar>
 
-        <br/>
-        <Form>
+        <p>
+        </p>
+
+      <Container>
+      <Form>
             <br/>
             <h2 style = {{fontWeight: "bold", textAlign: "left"}}>
-                Send Supplies
+                Request Supplies
             </h2>
 
             <br/>
@@ -69,7 +75,23 @@ class ReliefCompanyDonations extends React.Component {
 
             <br/>
             <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
-            Check off supplies you are sending:
+            How many people is your shelter responsible for:
+            </h6>
+
+            <Form.Group className="box">
+                <Form.Row>
+                    <Form.Label column lg={2}>
+                    People:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control type="text" placeholder="Insert Number" />
+                    </Col>
+                </Form.Row>
+            </Form.Group>
+
+            <br/>
+            <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
+            Check off supplies you are in need for:
             </h6>
             <Form.Group controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Water" />
@@ -81,44 +103,12 @@ class ReliefCompanyDonations extends React.Component {
                 <Form.Check type="checkbox" label="First-Aid" />
             </Form.Group>
 
-            <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
-            How many days are the supplies estimated to last?
-            </h6>
-
-            <Form.Group className="box">
-                <Form.Row>
-                    <Form.Label column lg={2}>
-                    Days:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control type="text" placeholder="Insert Number" />
-                    </Col>
-                </Form.Row>
-            </Form.Group>
-            
-            <br/>
-
-            <h6 style = {{fontWeight: "bold", textAlign: "left"}}>
-            Additional comments:
-            </h6>
-
-            <Form.Group className="box">
-                <Form.Row>
-                    <Col>
-                        <Form.Control type="text" placeholder="Optional input" />
-                    </Col>
-                </Form.Row>
-            </Form.Group>
-
             <Button variant="primary">Submit</Button>
         </Form>
-
-      <Container>
-        
       </Container>
       </div>
     )
 
   }
 }
-export default ReliefCompanyDonations
+export default ShelterRequest
